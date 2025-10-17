@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <style>
+        body {
+            background-image: url("2.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: blur(5px);
+
+        }
+
+
+        #witte-container {
+            background: linear-gradient(257deg, rgba(237, 237, 237, 1) 0%, rgba(247, 247, 247, 1) 64%, rgba(255, 255, 255, 1) 100%);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            width: 30%;
+            height: 450px;
+            margin: auto;
+            border-radius: 2%;
+            margin-top: 5%;
+        }
+
+        @media screen and (max-width: 1450px) {
+            #witte-container {
+                width: 50%;
+            }
+        }
+
+         @media screen and (max-width: 1050px) {
+            #witte-container {
+                width: 60%;
+            }
+        }
+
+          @media screen and (max-width: 700px) {
+            #witte-container {
+                width: 80%;
+            }
+        }
+
+
+
+        input[type=text] {
+            width: 80%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+        }
+
+
+        input[type=password] {
+            width: 80%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid black;
+            margin-top: 10%;
+        }
+
+        i {
+            margin-left: 1%;
+            color: rgb(136, 136, 136);
+            font-size: 2rem;
+
+        }
+
+
+        h1 {
+            font-family: "Poppins", sans-serif;
+            color: grey;
+            padding: 50px;
+            text-align: center;
+        }
+
+        button {
+            margin: auto;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            margin-top: 5%;
+            height: 40px;
+            background: linear-gradient(90deg, rgba(142, 175, 110, 1) 0%, rgba(60, 176, 108, 1) 56%, rgba(90, 161, 95, 1) 100%);
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #aanmeld:hover {
+            transform: scale(1.03);
+            transition: 0.3s;
+            filter: grayscale(30%);
+
+        }
+
+        p {
+            margin-top: 5%;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="witte-container">
+
+
+        <form>
+            <h1>Inlogscherm</h1>
+            <i class="bi bi-person-fill"></i><input type="text" placeholder="Gebruikersnaam"><br>
+            <i class="bi bi-key-fill"></i> <input type="password" placeholder="Wachtwoord">
+            <button id="aanmeld">Aanmelden</button>
+            <p><a href="#">Wachtwoord vergeten?</a></p>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>
