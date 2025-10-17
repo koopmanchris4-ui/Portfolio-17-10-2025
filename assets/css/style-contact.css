@@ -1,0 +1,269 @@
+/* zodat navbar veolledig aansluit op scherm */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(../Afbeeldingen/background.png);
+
+    /* binnenkomst transition */
+    opacity: 0;
+    animation: Binnenkomsttransition 0.5s ease forwards;
+}
+
+@keyframes Binnenkomsttransition {
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    background: linear-gradient(
+        90deg,
+        rgb(66, 153, 230) 0%,
+        rgb(37, 128, 202) 49%,
+        rgba(0, 132, 227, 1) 52%,
+        rgba(67, 124, 247, 1) 100%
+    );
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+    box-shadow: 10px 20px 50px rgb(126, 126, 126);
+    position: relative;
+}
+
+/* zwarte tekst navbar */
+
+.navbar-active {
+    color: rgb(0, 0, 0);
+}
+
+/* container om navbar opties */
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* opties in navbar */
+
+ul li a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins" sans-serif;
+}
+
+ul li a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+#navbar-titel {
+    color: white;
+    font-family: "Poppins" sans-serif;
+    font-size: 25px;
+}
+
+/* MEDIAQUERIES - NAVBAR */
+
+/* bij HELE kleine schermen text in navbar kleiner */
+
+@media only screen and (max-width: 450px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+    .navbar ul{
+        gap: 15px;
+    }
+}
+
+/* Haal de text portfolio Chris koopman weg bij klein scherm */
+@media only screen and (max-width: 700px) {
+    #navbar-titel {
+        display: none;
+    }
+
+    /* opties in midden bij wat kleine schermen */
+    .navbar ul {
+        margin: auto;
+    }
+}
+
+/* grijze vlak & container */
+
+#contact-vlak {
+    width: 80%;
+    height: 600px;
+    background-color: rgb(229, 229, 229);
+    padding: 20px;
+    margin: auto;
+    box-shadow: 10px 20px 50px rgb(126, 126, 126);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+/* tekst "neem contact met me op!" */
+
+#contact-vlak-titel {
+    text-align: center;
+}
+
+/* plaatjes insta, email, linkedin */
+
+.plaatje-media {
+    margin-top: 7%;
+    width: 40%;
+    margin-left: 25%;
+    border-radius: 50%;
+    box-shadow: 10px 20px 30px rgb(126, 126, 126);
+}
+
+.plaatje-media:hover {
+    transform: scale(1.06);
+    transition: 0.3s;
+}
+
+/* container van plaatjes en tekst in de breedte (3) */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* container van één plaatje en tekst (1) */
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* iets ruimte tussen plaatje en tekst eronder */
+
+p {
+    margin-top: 3%;
+    color: black;
+}
+
+/* tekst van media platformen onder plaatjes iets naar links, zodat in het midden */
+
+p b {
+    margin-left: -7%;
+    color: black;
+}
+
+/* de p tag een bold-weight gegeven, Zo telt hij niet als p b, maar is hij toch bold. Dit is de tekst die mijn profielnamen dikdrukt */
+
+p i {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* bij kleinere schermen onder 900px, gaan de plaatjes links van scherm onder elkaar, tekst volgt rechts ervan.  */
+
+@media only screen and (max-width: 900px) {
+    p {
+        margin-top: -10%;
+        margin-left: 25%;
+    }
+
+    /* dikke tekst van platformen onder plaatje  gaat weg bij klein scherm */
+    p b {
+        display: none;
+    }
+
+    /* plaatje wordt kleiner en gaat naar goede positie */
+    .plaatje-media {
+        width: 20%;
+        margin-left: 2%;
+        margin-top: 15%;
+    }
+
+    /* titel gaat weg bij klein scherm */
+
+    #contact-vlak-titel {
+        display: none;
+    }
+
+    /* alles gaat onder elkaar bij kleine schermen */
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* MEDIAQUERIES - CONTACT VLAK KLEINER BIJ KLEINERE SCHERMEN */
+
+@media only screen and (max-width: 1300px) {
+    #contact-vlak {
+        height: 400px;
+    }
+}
+
+/* bij 900px word de contact vlak groter zodat er niets uitvalt */
+
+@media only screen and (max-width: 900px) {
+    #contact-vlak {
+        height: 600px;
+    }
+}
+
+/* bij 600px wordt de contact vlak kleiner, omday scherm ook kleiner wordt */
+@media only screen and (max-width: 600px) {
+    #contact-vlak {
+        height: 500px;
+    }
+}
+
+/* bij HELE kleine schermen wordt het contact vlak dezelfde breedte van navbar en de tekst iets kleiner */
+@media only screen and (max-width: 400px) {
+    #contact-vlak {
+        width: 86%;;
+    }
+    p{
+        font-size: 1em;
+    }
+}
+
+/* input velden grootte en tekst in midden */
+
+.input {
+    height: 30px;
+    width: 20%;
+    text-align: center;
+}
+
+/* blauwe tint als geselecteerd */
+
+.input:focus {
+    background-color: rgb(200, 222, 243);
+    transition: 1s;
+}
+
+/* volledige invoerveld + knop */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#uitleg-tekst-onderaan {
+    margin-top: 2%;
+    color: white;
+    text-align: center;
+}
+
+#verstuurknop {
+    background-color: rgb(68, 151, 235);
+    color: white;
+    border: none;
+}
+
+/* donkere tint bij hover */
+
+#verstuurknop:hover {
+    background-color: rgb(80, 101, 176);
+    transition: 0.3s;
+}

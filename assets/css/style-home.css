@@ -1,0 +1,236 @@
+/* zodat navbar veolledig aansluit op scherm */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(../Afbeeldingen/background.png);
+
+
+    /* binnenkomst transition */
+    opacity: 0;
+    animation: Binnenkomsttransition 0.5s ease forwards;
+}
+
+
+@keyframes Binnenkomsttransition {
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    background: linear-gradient(
+        90deg,
+        rgb(66, 153, 230) 0%,
+        rgb(37, 128, 202) 49%,
+        rgba(0, 132, 227, 1) 52%,
+        rgba(67, 124, 247, 1) 100%
+    );
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+    box-shadow: 10px 20px 50px rgb(126, 126, 126);
+    position: relative;
+}
+
+/* zwarte tekst navbar */
+
+.navbar-active {
+    color: rgb(0, 0, 0);
+}
+
+/* container om navbar opties */
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* opties in navbar */
+
+ul li a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins" sans-serif;
+}
+
+ul li a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+#navbar-titel {
+    color: white;
+    font-family: "Poppins" sans-serif;
+    font-size: 25px;
+}
+
+/* MEDIAQUERIES - NAVBAR */
+
+
+/* bij HELE kleine schermen text in navbar kleiner */
+
+@media only screen and (max-width: 450px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+    .navbar ul{
+        gap: 15px;
+    }
+}
+
+/* Haal de text portfolio Chris koopman weg bij klein scherm */
+@media only screen and (max-width: 700px) {
+    #navbar-titel {
+        display: none;
+    }
+
+    /* opties in midden bij wat kleine schermen */
+    .navbar ul {
+        margin: auto;
+    }
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+#theme-toggle:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+/* grijs vlak onder navbar met mijn naam en hoofd */
+
+#grijsvlak {
+    height: 250px;
+    width: 100%;
+    background-color: rgb(222, 222, 222);
+    box-shadow: 10px 20px 50px rgb(126, 126, 126);
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+}
+
+#plaatjechris {
+    margin-left: 30%;
+    width: 250px;
+    min-width: 200px;
+    border-radius: 37% 63% 36% 64% / 47% 38% 62% 53%;
+}
+
+#plaatjechris:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* bij kleine schermen, mijn hoofd en tekst naar links van scherm */
+@media only screen and (max-width: 800px) {
+    #plaatjechris {
+        margin-left: 0%;
+    }
+}
+
+#blauwetekst-opleiding {
+    font-family: "Poppins" sans-serif;
+    color: rgb(21, 123, 240);
+}
+
+.tekst-blok-naast-hoofd {
+    margin-left: 2%;
+}
+
+h1 {
+    font-family: "Poppins" sans-serif;
+}
+
+/* MEDIAQUERIES VOOR tEKST NAAST MIJN HOOFD */
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #blauwetekst-opleiding {
+        font-size: 1.2rem;
+    }
+}
+
+#grijsvlak2 {
+    margin: auto;
+    margin-top: 5%;
+    height: fit-content;
+    width: 75%;
+    border-radius: 5%;
+    background-color: rgb(222, 222, 222);
+    padding: 40px;
+}
+
+#grijsvlak2:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+#over-mij-tekst {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#over-mij-tekst p {
+    width: 100%;
+    max-height: 100%;
+    font-size: 1.4rem;
+}
+
+/* MEDIAQUERIES VOOR KLEINE TEKST - OVER MIJ */
+
+/* tekst wordt kleiner bij elk formaat zodat het mooi op formaat blijft */
+
+/* 1300px */
+
+@media only screen and (max-width: 1300px) {
+    #over-mij-tekst p {
+        font-size: 1.3rem;
+    }
+}
+
+/* 1200px */
+
+@media only screen and (max-width: 1200px) {
+    #over-mij-tekst p {
+        font-size: 1.2rem;
+    }
+}
+
+/* 1000px */
+
+@media only screen and (max-width: 1000px) {
+    #over-mij-tekst p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 800px */
+
+@media only screen and (max-width: 800px) {
+    #over-mij-tekst p {
+        font-size: 1rem;
+    }
+}
+
+/* 600px */
+
+@media only screen and (max-width: 600px) {
+    #over-mij-tekst p {
+        font-size: 0.9rem;
+    }
+}

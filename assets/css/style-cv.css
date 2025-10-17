@@ -1,0 +1,133 @@
+/* zodat navbar veolledig aansluit op scherm */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url(../Afbeeldingen/background.png);
+
+    /* binnenkomst transition */
+    opacity: 0;
+    animation: Binnenkomsttransition 0.5s ease forwards;
+}
+
+@keyframes Binnenkomsttransition {
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    background: linear-gradient(
+        90deg,
+        rgb(66, 153, 230) 0%,
+        rgb(37, 128, 202) 49%,
+        rgba(0, 132, 227, 1) 52%,
+        rgba(67, 124, 247, 1) 100%
+    );
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+    box-shadow: 10px 20px 50px rgb(126, 126, 126);
+    position: relative;
+}
+
+/* zwarte tekst navbar */
+
+.navbar-active {
+    color: rgb(0, 0, 0);
+}
+
+/* container om navbar opties */
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+/* opties in navbar */
+
+ul li a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins" sans-serif;
+}
+
+ul li a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+#navbar-titel {
+    color: white;
+    font-family: "Poppins" sans-serif;
+    font-size: 25px;
+}
+
+/* MEDIAQUERIES - NAVBAR */
+
+/* bij HELE kleine schermen text in navbar kleiner */
+
+@media only screen and (max-width: 450px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+    .navbar ul {
+        gap: 15px;
+    }
+}
+
+/* Haal de text portfolio Chris koopman weg bij klein scherm */
+@media only screen and (max-width: 700px) {
+    #navbar-titel {
+        display: none;
+    }
+
+    /* opties in midden bij wat kleine schermen */
+    .navbar ul {
+        margin: auto;
+    }
+}
+
+h1 {
+    font-family: "Poppins" sans-serif;
+}
+
+#cv {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(1vw + 30px); /* ➜ hoe kleiner het scherm, hoe minder vw, dus hij zakt mee */
+    border: 2px solid rgba(200, 200, 200, 0.222);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, margin-top 0.3s ease;
+}
+
+
+#cv:hover {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 1000px) {
+    #cv{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #cv{
+        width: 90%;
+    }
+}
+

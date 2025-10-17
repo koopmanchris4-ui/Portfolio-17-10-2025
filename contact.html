@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- letters -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="Favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="Favicon/favicon.svg" />
+    <link rel="shortcut icon" href="Favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="Faviocn/apple-touch-icon.png" />
+    <link rel="manifest" href="Favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="assets/css/style-contact.css">
+
+
+   
+    <!-- alvast thema maken boven CSS en HTML, zodat geen flits (omdat JS onderaan nog moet inladen) -->
+    <script src="assets/js/bovenscript.js"></script>
+
+</head>
+
+<div>
+
+    <nav class="navbar">
+        <div id="navbar-titel"><b>Portfolio Chris Koopman</b></div>
+        <ul>
+            <li><a href="index.html"><b>Over</b></a></li>
+            <li><a href="projecten.html"><b>Projecten</b></a></li>
+            <li><a class="navbar-active" href="contact.html"><b>Contact</b></a></li>
+            <li><a href="cv.html"><b>CV</b></a></li>
+            <li onclick="anderThema()"><a id="anderthema" href="#"><b>🌙</b></a></li>
+
+        </ul>
+    </nav>
+
+    <!-- grijs vlak container -->
+
+    <div id="contact-vlak">
+        <h1 id="contact-vlak-titel">Neem contact met me op!</h1>
+
+        <!-- Instagram items -->
+        <a href="https://www.instagram.com/chris_koopman14/">
+            <div id="social-icoon"></div>
+            <div class="container">
+                <div class="inner-container">
+                    <img class="plaatje-media" src="assets/Afbeeldingen/plaatjeinstragram.png">
+                    <p><b>Instagram</b></p><br>
+                    <p>Stuur me een bericht op Instagram via <i>chris_koopman14</i></p>
+                </div>
+        </a>
+
+        <!-- Mail items -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=koopmanchris4@gmail.com">
+            <div class="inner-container">
+                <img class="plaatje-media" src="assets/Afbeeldingen/plaatjemail.png">
+                <p><b>E-Mail</b></p><br>
+                <p>Stuur een Mail naar het adres, <i>koopmanchris4@gmail.com</i></p>
+            </div>
+        </a>
+        <!-- Linkedin items -->
+
+        <a href="https://www.linkedin.com/in/chris-koopman-48811529a/
+">
+            <div class="inner-container">
+                <img class="plaatje-media" src="assets/Afbeeldingen/linkedin.png">
+                <p><b>LinkedIn</b></p><br>
+                <p>Stuur me een bericht op LinkedIn via <i>Chris Koopman</i></p>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- web3forms formulier -->
+
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="fec86378-3709-4cd7-ab5f-84f5c12fc21b">
+
+    <input class="input" type="text" name="name" required placeholder="Uw naam:">
+    <input class="input" type="email" name="email" required placeholder="Uw e-mailadres:">
+    <input class="input" name="message" required placeholder="Uw bericht:"></input>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button id="verstuurknop" type="submit">Verstuur</button>
+
+</form>
+
+<div id="uitleg-tekst-onderaan">Klik op de media icoontjes of op de tekst om in contact te komen, of stuur een
+    bericht via het bovenstaande formulier!</div>
+
+<script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
